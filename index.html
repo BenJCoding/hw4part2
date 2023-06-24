@@ -1,0 +1,64 @@
+<!-- File: index.html
+     GUI Assignment: JQ UI
+     Author: Benjamin Jancsy
+     Created: June 22, 2023
+     Dynamically creates a custom multiplication table, validating user input and diplaying
+     helpful error messages using JQ validation/ Includes useful UI features such as JQ UI slider.
+     Tabs can be saved and deleted individually, just click on the desired tab then click delete.
+     Copyright (c)  2023 by Ben.
+     References: w3schools.com -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="./images/favicon.png" /><!-- Preview card for link share -->
+    <title>HW 4 PART 2</title>
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon"><!-- custom icon -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <link href="./css/jquery-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+        <h2>HW 4 - JQ UI</h2>
+        <h3>Enter the number ranges for the multiplication table:</h3>
+        <form id="form" onsubmit="return false"><!-- Keeps data persistent upon submit -->
+          <div id="slider1"></div>
+          <p>
+            <label for="lowcol" class="label">From</label>
+            <input type="text" id="lowcol"  class="ranges" name="lowcol">
+          </p>
+          <p class="high">
+            <label for="highcol" class="label thru">through</label>
+            <input type="text" id="highcol" class="ranges" name="highcol">
+          </p>
+          <br>
+          <span>and</span>
+          <br>
+          <div id="slider2"></div>
+          <p>
+            <label for="lowrow" class="label">From</label>
+            <input type="text" id="lowrow" class="ranges" name="lowrow">
+          </p>
+          <p class="high">
+            <label for="highrow" class="label thru">through</label>
+            <input type="text" id="highrow" class="ranges" name="highrow">
+          </p>
+          <div id="errordiv"></div><!-- Error messages here -->
+          <input type="button" id="submit" value="Save Table"><!-- Save the table -->
+          <input type="button" id="clear" value="Delete Tab"><!-- Delete selected tab -->
+          <input type="reset" id="reset" value="Delete All Tabs"><!-- Delete all tabs -->
+        </form>
+        <span>&copy 2023 by Ben</span>
+        <div id="tabs">
+          <ul id="list">
+          </ul>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
