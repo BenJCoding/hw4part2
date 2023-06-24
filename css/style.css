@@ -1,1 +1,142 @@
-
+/*   File: style.css
+     GUI Assignment: JQ UI
+     Author: Benjamin Jancsy
+     Created: June 22, 2023
+     Dynamically creates a custom multiplication table, validating user input and diplaying
+     helpful error messages using JQ validation/ Includes useful UI features such as JQ UI slider.
+     Tabs can be saved and deleted individually, just click on the desired tab then click delete.
+     Copyright (c)  2023 by Ben.
+     References: w3schools.com */
+body { /* body color */
+    background-color: rgb(220, 220, 195);
+}
+h2 { /* welcome message */
+    margin-top: -5px;
+    height: 15px;
+    color: rgb(118, 49, 17);
+    font-family: 'Helvetica';
+}
+h3 { /* instruction for user */
+    height: 10px;
+    margin-top: -8px;
+    margin-bottom: 15px;
+    color: rgb(87, 80, 11);
+    font-family: 'Arial';
+}
+main {
+    margin: auto;
+    text-align: center;
+}
+.tablediv { /* Div that holds the table */
+    max-height: 55vh;
+    width: 70%;
+    margin: 0 auto;
+    overflow-y: auto;  /* make it scroll */
+    overflow-x: auto;
+}
+table, td, th {
+    border: 1px double red;
+    padding: 0;
+}
+table {
+    margin: 0 auto;
+    padding: 0;
+}
+th {/* contrast for table head */
+    background-color: blue;
+    color: white;
+}
+input, label {/* make the form look nice */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.ranges {
+    width: 100px;
+    height: 25px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+#submit, #reset, #clear {/* fancy buttons! */
+    background-color: transparent;
+    height: 30px;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#errordiv {/* div that holds all the error messages */
+    color: red;
+    font-weight: bold;
+}
+span { /* says and */
+    font-style: italic;
+}
+th { /* Makes the table headers stick upon scroll */
+    position: sticky;
+    top: -16px;
+    left: -22px;
+    z-index: 10; /* brings to front */
+    padding: 0;
+    margin: 0;
+}
+#form input.error {/* changes input box */
+    border: 2px solid red;
+    color: red;
+}
+input {
+    width: 120px;
+}
+label {
+    padding-right: 10px;
+}
+form {/* ui form */
+    border: 3px double black;
+    width: 500px;
+    margin: auto;
+    min-width: 500px;
+    background-color: rgb(185, 187, 189);
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {/* holds input */
+    display: inline-block;
+    position: relative;
+    margin-top: 0px;
+    width: 195px;
+}
+label.error {/* jq validation element */
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    color: red;
+    white-space: nowrap;
+}
+.high label.error { /* errors on right hand #'s  */
+    right: -7px;;
+}
+.thru {/* "through" words */
+    margin-left: -5px;
+}
+.ui-tabs {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+.ui-tabs .ui-tabs-tab {/* tabs tabs and more tabs (from jqueryui.com) */
+    font-size: 16px; 
+    padding: 10px;
+    margin-top: 15px;
+}
+.ui-tabs .ui-tabs-panel {/* tabs and tab panel*/
+    font-size: 16px;
+    padding: 10px;
+    margin: 0p auto;
+    max-height: 53vh;
+}
+#slider1, #slider2 { /* sliders */
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
